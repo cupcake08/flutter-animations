@@ -44,78 +44,63 @@ class _CircularAnimationState extends State<CircularAnimation>
         title: const Text("Circular Flow"),
       ),
       body: Center(
-        child: Stack(
-          children: [
-            AnimatedBuilder(
-              animation: _controller,
-              builder: (context, _) {
-                return Transform(
-                  transform: Matrix4.translationValues(
-                      margin * _controller.value, 0, 0),
-                  child: Container(
-                    // transform: Matrix4.identity()..translate(45),
-                    width: buttonSize,
-                    height: buttonSize,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(buttonSize / 2),
-                      color: color,
-                    ),
-                    child: Icon(
-                      Icons.share,
-                      color: iconColor,
-                      size: iconSize,
-                    ),
+        child: AnimatedBuilder(
+          animation: _controller,
+          builder: (context, child) => Stack(
+            children: [
+              Transform(
+                transform:
+                    Matrix4.translationValues(margin * _controller.value, 0, 0),
+                child: Container(
+                  // transform: Matrix4.identity()..translate(45),
+                  width: buttonSize,
+                  height: buttonSize,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(buttonSize / 2),
+                    color: color,
                   ),
-                );
-              },
-            ),
-            AnimatedBuilder(
-              animation: _controller,
-              builder: (context, _) {
-                return Transform(
-                  transform: Matrix4.translationValues(
-                      0, margin * _controller.value, 0),
-                  child: Container(
-                    width: buttonSize,
-                    height: buttonSize,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(buttonSize / 2),
-                      color: color,
-                    ),
-                    child: Icon(
-                      Icons.home,
-                      color: iconColor,
-                      size: iconSize,
-                    ),
+                  child: Icon(
+                    Icons.share,
+                    color: iconColor,
+                    size: iconSize,
                   ),
-                );
-              },
-            ),
-            AnimatedBuilder(
-              animation: _controller,
-              builder: (context, _) {
-                return Transform(
-                  transform: Matrix4.translationValues(
-                      0, -margin * _controller.value, 0),
-                  child: Container(
-                    width: buttonSize,
-                    height: buttonSize,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(buttonSize / 2),
-                      color: color,
-                    ),
-                    child: Icon(
-                      Icons.settings,
-                      color: iconColor,
-                      size: iconSize,
-                    ),
+                ),
+              ),
+              Transform(
+                transform:
+                    Matrix4.translationValues(0, margin * _controller.value, 0),
+                child: Container(
+                  width: buttonSize,
+                  height: buttonSize,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(buttonSize / 2),
+                    color: color,
                   ),
-                );
-              },
-            ),
-            AnimatedBuilder(
-              animation: _controller,
-              builder: (context, child) => Transform(
+                  child: Icon(
+                    Icons.home,
+                    color: iconColor,
+                    size: iconSize,
+                  ),
+                ),
+              ),
+              Transform(
+                transform: Matrix4.translationValues(
+                    0, -margin * _controller.value, 0),
+                child: Container(
+                  width: buttonSize,
+                  height: buttonSize,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(buttonSize / 2),
+                    color: color,
+                  ),
+                  child: Icon(
+                    Icons.settings,
+                    color: iconColor,
+                    size: iconSize,
+                  ),
+                ),
+              ),
+              Transform(
                 transform: Matrix4.translationValues(
                     -margin * _controller.value, 0, 0),
                 child: Container(
@@ -132,32 +117,27 @@ class _CircularAnimationState extends State<CircularAnimation>
                   ),
                 ),
               ),
-            ),
-            AnimatedBuilder(
-              animation: _controller,
-              builder: (context, _) {
-                return GestureDetector(
-                  onTap: toggle,
-                  child: Container(
-                    width: buttonSize,
-                    height: buttonSize,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(buttonSize / 2),
-                      color: menuColor,
-                    ),
-                    child: Center(
-                      child: AnimatedIcon(
-                        size: iconSize,
-                        icon: AnimatedIcons.menu_close,
-                        progress: _controller,
-                        color: iconColor,
-                      ),
+              GestureDetector(
+                onTap: toggle,
+                child: Container(
+                  width: buttonSize,
+                  height: buttonSize,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(buttonSize / 2),
+                    color: menuColor,
+                  ),
+                  child: Center(
+                    child: AnimatedIcon(
+                      size: iconSize,
+                      icon: AnimatedIcons.menu_close,
+                      progress: _controller,
+                      color: iconColor,
                     ),
                   ),
-                );
-              },
-            )
-          ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
