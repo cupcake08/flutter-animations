@@ -1,6 +1,6 @@
-import 'package:beginner/animations/animated_cross_fade.dart';
-import 'package:beginner/animations/size_transition.dart';
+// import 'package:beginner/animations/animated_cross_fade.dart';
 // import 'package:beginner/animations/size_transition.dart';
+import 'package:beginner/animations/flow.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const SafeArea(
-        child: CustomSizeTransition(),
+        child: FlowMenu(),
       ),
     );
   }
