@@ -11,7 +11,7 @@ class Back extends StatelessWidget {
       child: Container(
         color: Colors.blue,
         padding: const EdgeInsets.all(25),
-        constraints: BoxConstraints(
+        constraints: const BoxConstraints(
           maxWidth: 250,
         ),
         child: Column(
