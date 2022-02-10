@@ -1,6 +1,6 @@
 // import 'package:beginner/animations/animated_cross_fade.dart';
 // import 'package:beginner/animations/size_transition.dart';
-import 'package:beginner/animations/circular.dart';
+import 'package:beginner/animations/staggered_animation.dart';
 // import 'package:beginner/animations/flow.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const SafeArea(
-        child: CircularAnimation(),
+        child: StaggerDemo(),
       ),
     );
   }
