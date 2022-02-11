@@ -133,42 +133,47 @@ class _BottomPartState extends State<BottomPart> with TickerProviderStateMixin {
       height: 80,
       width: double.infinity,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          GestureDetector(
-            onTap: () {
-              setState(() {
-                _selectedIndex = 0;
-              });
-            },
-            child: Test(
-              icon: Icons.home_max_outlined,
-              text: "Coach",
-              controller: _controllers[0],
+          Expanded(
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  _selectedIndex = 0;
+                });
+              },
+              child: Test(
+                icon: Icons.home_max_outlined,
+                text: "Coach",
+                controller: _controllers[0],
+              ),
             ),
           ),
-          GestureDetector(
-            onTap: () {
-              setState(() {
-                _selectedIndex = 1;
-              });
-            },
-            child: Test(
-              icon: Icons.task_alt,
-              text: "Journal",
-              controller: _controllers[1],
+          Expanded(
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  _selectedIndex = 1;
+                });
+              },
+              child: Test(
+                icon: Icons.task_alt,
+                text: "Journal",
+                controller: _controllers[1],
+              ),
             ),
           ),
-          GestureDetector(
-            onTap: () {
-              setState(() {
-                _selectedIndex = 2;
-              });
-            },
-            child: Test(
-              icon: Icons.person,
-              text: "Profile",
-              controller: _controllers[2],
+          Expanded(
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  _selectedIndex = 2;
+                });
+              },
+              child: Test(
+                icon: Icons.person,
+                text: "Profile",
+                controller: _controllers[2],
+              ),
             ),
           ),
         ],
