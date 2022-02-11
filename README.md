@@ -9,3 +9,7 @@
 | <img src="videos/cross-fade.gif" height="300" /> | <img src="videos/size-transition.gif" height="300"/> | <img src="videos/flow1.gif" height="300" w/>|
 | Flow 2  | Staggered Animation |  |
 | <img src="videos/flow2.gif" height="300" /> | <img src = "videos/staggered.gif" height="300"/>| |
+
+- Bottom Nav Bar 
+
+<img src = "videos/ezgif-3-b7aacd8445.gif" width="400em" />
