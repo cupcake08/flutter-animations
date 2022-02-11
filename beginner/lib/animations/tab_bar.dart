@@ -1,19 +1,13 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter/scheduler.dart';
 
-class CustomTabBar extends StatefulWidget {
+class CustomTabBar extends StatelessWidget {
   const CustomTabBar({Key? key}) : super(key: key);
 
-  @override
-  _CustomTabBarState createState() => _CustomTabBarState();
-}
-
-class _CustomTabBarState extends State<CustomTabBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("test"),
+        title: const Text("Custom Nav Bar"),
       ),
       bottomNavigationBar: const BottomPart(),
     );
