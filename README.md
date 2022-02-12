@@ -12,4 +12,4 @@
 
 - Bottom Nav Bar 
 
-<img src = "videos/ezgif-3-b7aacd8445.gif" width="400em" />
+<img src = "videos/ezgif-2-2e7393d8bc.gif" width="400em">
