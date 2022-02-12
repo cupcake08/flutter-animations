@@ -42,7 +42,7 @@ class _TestState extends State<Test> with SingleTickerProviderStateMixin {
       CurvedAnimation(
         parent: _controller,
         curve: Curves.elasticOut,
-        reverseCurve: Curves.fastOutSlowIn,
+        reverseCurve: Curves.easeOutCubic,
       ),
     );
     _color = ColorTween(begin: const Color(0xFF7C8693), end: Colors.black)
@@ -97,7 +97,7 @@ class _BottomPartState extends State<BottomPart> with TickerProviderStateMixin {
       _controllers.add(
         AnimationController(
           vsync: this,
-          duration: const Duration(milliseconds: 500),
+          duration: const Duration(milliseconds: 800),
         ),
       );
     }
